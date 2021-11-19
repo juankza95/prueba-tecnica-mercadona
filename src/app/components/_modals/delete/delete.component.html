@@ -1,0 +1,18 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-delete-title">Delete user #{{ dataId }}</h4>
+  <button type="button" class="close" aria-label="Close" [disabled]="loading" (click)="dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p class="mb-0">
+    Are you sure you want to delete this User?<br>
+    <strong>This action is irreversible!</strong>
+  </p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" [disabled]="loading" (click)="submit()">
+    <div class="spinner-border spinner-border-sm" [hidden]="!loading" role="status" aria-hidden="true"></div>
+    <span [class.ml-2]="loading">Delete</span>
+  </button>
+</div>

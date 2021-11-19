@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-create-title">Create user</h4>
+  <button type="button" class="close" aria-label="Close" [disabled]="loading" (click)="dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="form-group">
+    <label for="fc-email">Email</label>
+    <input type="email" id="fc-email" class="form-control" [(ngModel)]="data.email" [readonly]="loading">
+  </div>
+  <div class="form-group">
+    <label for="fc-name">Name</label>
+    <input type="text" id="fc-name" class="form-control" [(ngModel)]="data.name" [readonly]="loading">
+  </div>
+  <div class="form-group">
+    <label for="fc-phone">Phone</label>
+    <input type="tel" id="fc-phone" class="form-control" [(ngModel)]="data.phone" [readonly]="loading">
+  </div>
+  <div class="form-group">
+    <label for="fc-username">Username</label>
+    <input type="text" id="fc-username" class="form-control" [(ngModel)]="data.username" [readonly]="loading">
+  </div>
+  <div class="form-group">
+    <label for="fc-website">Website</label>
+    <input type="url" id="fc-website" class="form-control" [(ngModel)]="data.website" [readonly]="loading">
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" [disabled]="loading" (click)="submit()">
+    <div class="spinner-border spinner-border-sm" [hidden]="!loading" role="status" aria-hidden="true"></div>
+    <span [class.ml-2]="loading">Save</span>
+  </button>
+</div>
